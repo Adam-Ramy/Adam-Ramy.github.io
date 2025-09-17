@@ -1,96 +1,178 @@
-/* General Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* ====== General Styles ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
 body {
-  font-family: "Poppins", sans-serif;
   line-height: 1.6;
-  background: #fff;
+  background: #f9f9f9;
   color: #333;
-  transition: background 0.3s, color 0.3s;
 }
-.container { width: 90%; max-width: 1100px; margin: auto; }
 
-/* Navbar */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ====== Navbar ====== */
 nav {
-  background: #1e1e2f;
-  color: white;
+  background: #1e1e1e;
+  color: #fff;
   padding: 15px 0;
-  position: sticky; top: 0; z-index: 1000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-.nav-content { display: flex; justify-content: space-between; align-items: center; }
-.nav-links { list-style: none; display: flex; gap: 20px; }
-.nav-links a { color: white; text-decoration: none; font-weight: bold; }
-.logo { font-size: 1.5rem; }
-#darkModeToggle { background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer; }
 
-/* Hero Section */
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1e90ff;
+}
+
+#darkModeToggle {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* ====== Hero ====== */
 .hero {
-  background: linear-gradient(135deg, #1e90ff, #6a5acd);
-  color: white;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://via.placeholder.com/1600x600/1e90ff/ffffff?text=Welcome+to+My+Portfolio')
+              no-repeat center/cover;
+  color: #fff;
   text-align: center;
   padding: 100px 20px;
 }
-.hero span { color: #ffdf00; }
+
+.hero h2 span {
+  color: #1e90ff;
+}
+
 .btn {
   display: inline-block;
-  background: #ffdf00;
-  color: #333;
-  padding: 10px 20px;
   margin-top: 15px;
+  padding: 10px 20px;
+  background: #1e90ff;
+  color: #fff;
   text-decoration: none;
   border-radius: 5px;
-  font-weight: bold;
+  transition: 0.3s;
 }
-.btn:hover { background: #ffd700; }
 
-/* Sections */
-section { padding: 60px 0; }
-section h2 { text-align: center; margin-bottom: 30px; font-size: 2rem; color: #1e90ff; }
+.btn:hover {
+  background: #0d6efd;
+}
 
-/* Cards */
+/* ====== Sections ====== */
+section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #1e1e1e;
+}
+
+/* ====== Cards ====== */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
+
 .card {
-  background: #f9f9f9;
+  background: #fff;
   padding: 20px;
   border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.3s;
 }
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-.card i { font-size: 2rem; color: #6a5acd; margin-bottom: 15px; }
-.card img { width: 100%; border-radius: 8px; }
 
-/* Contact */
-.socials { margin-top: 20px; }
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #1e90ff;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ====== Contact ====== */
+.socials {
+  margin-top: 15px;
+}
+
 .socials a {
   margin: 0 10px;
   font-size: 1.5rem;
+  color: #1e1e1e;
+  transition: 0.3s;
+}
+
+.socials a:hover {
   color: #1e90ff;
-  transition: color 0.3s;
 }
-.socials a:hover { color: #6a5acd; }
 
-/* Footer */
+/* ====== Footer ====== */
 footer {
+  background: #1e1e1e;
+  color: #fff;
   text-align: center;
-  padding: 20px;
-  background: #1e1e2f;
-  color: white;
+  padding: 20px 0;
+  margin-top: 40px;
 }
 
-/* Animations */
-.fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-in-out; }
-.fade-in.show { opacity: 1; transform: translateY(0); }
+/* ====== Animations ====== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+}
 
-/* Dark Mode */
-body.dark { background: #1e1e2f; color: #eee; }
-body.dark nav { background: #111; }
-body.dark .card { background: #2a2a3c; color: #eee; }
-body.dark footer { background: #111; }
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
