@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Adam | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
   <!-- ====== Navbar ====== -->
@@ -18,7 +18,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button id="darkModeToggle"><i class="fas fa-moon"></i></button>
+      <button id="darkModeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
     </div>
   </nav>
 
@@ -35,10 +35,22 @@
   <section id="about">
     <div class="container fade-in">
       <h2>About Me</h2>
-      <p>
-        I’m a web developer and freelancer with experience in building and managing digital projects.  
-        My mission is to help businesses grow by creating professional websites and online solutions.
-      </p>
+
+      <!-- About box (NEW: styled card) -->
+      <div class="about-box" role="region" aria-label="About Adam">
+        <div class="about-icon">
+          <i class="fas fa-user-gear" aria-hidden="true"></i>
+        </div>
+        <div class="about-text">
+          <p>
+            I’m a web developer and freelancer with experience in building and managing digital projects.
+            I focus on creating clean, responsive websites and landing pages that help businesses convert visitors
+            into customers. I love solving problems with simple, well-structured code and practical design.
+          </p>
+        </div>
+      </div>
+      <!-- end about box -->
+
     </div>
   </section>
 
@@ -97,7 +109,9 @@
       <p>You can reach me directly via email or LinkedIn:</p>
       <a href="mailto:adam.elsoly19@gmail.com" class="btn">adam.elsoly19@gmail.com</a>
       <div class="socials">
-        <a href="https://www.linkedin.com/in/adam-ramy-549aa2383" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/adam-ramy-549aa2383" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
   </section>
