@@ -5,12 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adam | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <!-- ====== Header ====== -->
-  <header>
+  <!-- ====== Navbar ====== -->
+  <nav>
+    <div class="container nav-content">
+      <h1 class="logo">Adam</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="darkModeToggle"><i class="fas fa-moon"></i></button>
+    </div>
+  </nav>
+
+  <!-- ====== Hero Section ====== -->
+  <header class="hero">
     <div class="container">
-      <h1>Adam</h1>
+      <h2>Hello, I'm <span>Adam</span></h2>
       <p>Web Developer & Dropservicing Freelancer</p>
       <a href="#contact" class="btn">Contact Me</a>
     </div>
@@ -18,30 +33,33 @@
 
   <!-- ====== About ====== -->
   <section id="about">
-    <div class="container">
+    <div class="container fade-in">
       <h2>About Me</h2>
       <p>
         I’m a web developer and freelancer with experience in building and managing digital projects.  
-        My goal is to help businesses establish a strong online presence and reach more clients through professional websites and digital solutions.
+        My mission is to help businesses grow by creating professional websites and online solutions.
       </p>
     </div>
   </section>
 
   <!-- ====== Services ====== -->
   <section id="services">
-    <div class="container">
+    <div class="container fade-in">
       <h2>Services</h2>
       <div class="cards">
         <div class="card">
+          <i class="fas fa-laptop-code"></i>
           <h3>Website Design</h3>
           <p>Modern, responsive websites that look great on any device.</p>
         </div>
         <div class="card">
+          <i class="fas fa-bullhorn"></i>
           <h3>Landing Pages</h3>
           <p>High-converting landing pages to boost sales and leads.</p>
         </div>
         <div class="card">
-          <h3>Social Media Management</h3>
+          <i class="fas fa-share-alt"></i>
+          <h3>Social Media</h3>
           <p>Grow your business by managing and optimizing social media accounts.</p>
         </div>
       </div>
@@ -50,20 +68,20 @@
 
   <!-- ====== Projects ====== -->
   <section id="projects">
-    <div class="container">
+    <div class="container fade-in">
       <h2>Projects</h2>
       <div class="cards">
         <div class="card">
-          <h3>Project 1</h3>
-          <p>E-commerce website for a small store.</p>
+          <img src="https://via.placeholder.com/300x200" alt="Project 1">
+          <h3>E-commerce Store</h3>
         </div>
         <div class="card">
-          <h3>Project 2</h3>
-          <p>Landing page for a startup company.</p>
+          <img src="https://via.placeholder.com/300x200" alt="Project 2">
+          <h3>Startup Landing Page</h3>
         </div>
         <div class="card">
-          <h3>Project 3</h3>
-          <p>Website speed optimization for a sports platform.</p>
+          <img src="https://via.placeholder.com/300x200" alt="Project 3">
+          <h3>Website Speed Optimization</h3>
         </div>
       </div>
     </div>
@@ -71,15 +89,22 @@
 
   <!-- ====== Contact ====== -->
   <section id="contact">
-    <div class="container">
+    <div class="container fade-in">
       <h2>Contact</h2>
-      <p>You can reach me via email:</p>
+      <p>You can reach me via email or social media:</p>
       <a href="mailto:yourmail@gmail.com" class="btn">yourmail@gmail.com</a>
+      <div class="socials">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
   </section>
 
   <footer>
     <p>© 2025 Adam | All rights reserved</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
